@@ -11,14 +11,14 @@ pipeline {
     stage('Build Project') {
       steps {
         echo 'from build stage'
+        sh label: '', script: 'msbuild NUnitTask2.sln'
       }
     }
     stage('Test') {
       steps {
          sh label: '', script: 'pwd'
-         sh label: '', script: 'cd /NUnitTask2'
+         sh label: '', script: 'cd NUnitTask2'
          sh label: '', script: 'ls -a'
-         sh label: '', script: 'msbuild NUnitTask2'
          sh label: '', script: 'dotnet test --no-build -l:trx'      
       }
     }
