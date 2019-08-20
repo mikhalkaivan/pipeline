@@ -23,7 +23,7 @@ pipeline {
     }
     stage('Post Build'){
       steps {
-        mstest()
+        echo 'from post build stage'
       }
     }
   }
