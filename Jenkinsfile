@@ -19,6 +19,7 @@ pipeline {
       steps {
          echo 'from test stage'
          sh label: '', script: 'pwd'
+         sh label: '', script: 'cd NUnitTask2'
          sh label: '', script: 'ls -a'
          sh label: '', script: 'dotnet test NUnitTask2/NUnitTask2.sln --no-build -l:trx'      
       }
