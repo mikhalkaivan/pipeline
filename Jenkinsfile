@@ -17,7 +17,9 @@ pipeline {
       steps {
          sh label: '', script: 'pwd'
          sh label: '', script: 'cd NUnitTask2'
-         sh label: '', script: 'dotnet test NUnitTask2.sln --no-build -l:trx'      
+         sh label: '', script: 'ls'
+         sh label: '', script: 'msbuild NUnitTask2'
+         sh label: '', script: 'dotnet test --no-build -l:trx'      
       }
     }
     stage('Post Build'){
