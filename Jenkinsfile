@@ -15,6 +15,7 @@ pipeline {
     }
     stage('Test') {
       steps {
+         sh label: '', script: 'pwd'
          sh label: '', script: 'cd NUnitTask2'
          sh label: '', script: 'dotnet test --no-build -l:trx'      
       }
