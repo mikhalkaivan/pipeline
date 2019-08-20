@@ -25,6 +25,7 @@ pipeline {
     stage('Post Build'){
       steps {
         echo 'from post build stage'
+        mstest()
       }
     }
   }
