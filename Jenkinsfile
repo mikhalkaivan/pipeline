@@ -11,6 +11,7 @@ pipeline {
     stage('Build Project') {
       steps {
         echo 'from build stage'
+         sh label: '', script: 'dotnet build NUnitTask2/NUnitTask2.sln'     
       }
     }
     stage('Test') {
